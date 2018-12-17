@@ -1,0 +1,2 @@
+FROM tomcat:7.0.77-jre8
+COPY . /usr/local/tomcat/

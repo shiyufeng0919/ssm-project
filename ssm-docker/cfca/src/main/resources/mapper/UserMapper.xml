@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.csvalue.dao.UserMapper">
+
+    <resultMap id="userResultMap" type="com.csvalue.model.User">
+        <id column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+        <result column="age" jdbcType="BIGINT" property="age" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+    </resultMap>
+
+    <select id="queryUserList" resultMap="userResultMap">
+       select user_id,user_name,user_pwd,age,email from com_user
+    </select>
+</mapper>
